@@ -1,0 +1,50 @@
+package tester;
+
+
+public class ValueTypeReferenceType {
+
+    
+    public static void main(String[] args) {
+        
+        /* value type */
+        
+        int i = 1;
+        int j = 2;
+        
+        System.out.println(" i = " + i);
+        System.out.println(" j = " + j); 
+       
+        j = i;
+        
+        System.out.println(" i = " + i);
+        System.out.println(" j = " + j);
+        
+        i = 9;
+        
+        System.out.println(" i = " + i);
+        System.out.println(" j = " + j);
+        
+        String str1 = "Hello";
+        String str2 = "bye";
+
+System.out.println("str1 = " + str1);
+        System.out.println("str2 = " + str2);
+        
+        str2 = str1;
+        
+        System.out.println("str1 = " + str1);
+        System.out.println("str2 = " + str2);
+        
+        str1 = "ok";
+        
+        System.out.println("str1 = " + str1);
+        System.out.println("str2 = " + str2);
+        
+        int u=str1.hashCode();
+        System.out.println("u="+u); //printing a unique value reagarding the string str1
+        //in java we can't get the address, java doesn't give access to it
+
+        //System.out.println("hashcode of str2"+str2.hashcode());
+        
+    }
+}

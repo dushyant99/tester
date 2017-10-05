@@ -1,0 +1,95 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package tester;
+import javax.swing.*;
+
+/**
+ *
+ * @author ops.mummidcmp01
+ */
+public class calculator {
+    public static void main(String[] args) {
+       float z;
+       int ch=0;
+       while(ch!=5)
+       {
+       String st=JOptionPane.showInputDialog("Enter your Choice: 1:Addition  2:Subtract  3:Multiply 4:Divide 5:Exit  " );
+       ch=Integer.parseInt(st);
+       
+       
+       switch(ch)
+       {
+           case 1:String s1=JOptionPane.showInputDialog("enter 1st number");
+       String s2=JOptionPane.showInputDialog("enter 2nd number");
+       float i=Float.parseFloat(s1);
+       float j=Float.parseFloat(s2);     
+               z=add(i,j);
+           
+           JOptionPane.showMessageDialog(null,"the result is : "+ z);
+                       break;
+           
+           case 2: s1=JOptionPane.showInputDialog("enter 1st number");
+       s2=JOptionPane.showInputDialog("enter 2nd number");
+       i=Float.parseFloat(s1);
+       j=Float.parseFloat(s2);    
+               
+               z=sub(i,j);
+           JOptionPane.showMessageDialog(null,"the result is : "+ z);
+                       break;
+           case 3:    s1=JOptionPane.showInputDialog("enter 1st number");
+       s2=JOptionPane.showInputDialog("enter 2nd number");
+       i=Float.parseFloat(s1);
+       j=Float.parseFloat(s2);   
+               
+               z=mul(i,j);
+           JOptionPane.showMessageDialog(null,"the result is : "+ z);
+                       break;
+           case 4: s1=JOptionPane.showInputDialog("enter 1st number");
+       s2=JOptionPane.showInputDialog("enter 2nd number");
+       i=Float.parseFloat(s1);
+       j=Float.parseFloat(s2);      
+               
+            z=div(i,j);
+           JOptionPane.showMessageDialog(null,"the result is : "+ z);
+                       break;
+                       
+           case 5:     break;            
+           default:JOptionPane.showMessageDialog(null, "Invalid input");
+                       
+       }
+       
+       
+       }
+        
+       
+    }
+    
+   static float add(float i,float j)
+    {
+        float z=i+j;
+        return z;
+    }
+   
+   static float sub(float i,float j)
+   {
+       float z=i-j;
+       return z;
+   }
+   
+   static float mul(float i,float j)
+   {
+       float z=i*j;
+       return z;
+   }
+    static float div(float i,float j)
+   {
+       float z=i/j;
+       return z;
+   }
+   
+   
+   
+}
